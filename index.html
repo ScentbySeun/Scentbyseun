@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -385,7 +384,13 @@ nav a:hover {
 }
 
 .contact-content {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
+}
+
+.contact-info {
+  margin-bottom: 40px;
 }
 
 .contact-info p {
@@ -396,6 +401,61 @@ nav a:hover {
 .social-info {
   font-weight: 500;
   color: #d4a373;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #d4a373;
+  box-shadow: 0 0 5px rgba(212, 163, 115, 0.3);
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form a.btn-primary {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link {
+  color: #d4a373;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #b88b5e;
 }
 
 /* Footer Styles */
@@ -436,7 +496,14 @@ footer p {
   }
 
   nav .container {
-    flex-direction
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
   </style>
 </head>
 <body>
@@ -455,7 +522,7 @@ footer p {
   </nav>
 
   <section class="hero">
-    <img src="https://public.youware.com/users-website-assets/prod/a8e461ac-6f9d-43bb-9be1-2cac44df5698/f2fc4891e83044c89eba9f4f9e6736b4.jpeg" alt="Luxury Perfume" class="hero-background">
+    <img src="https://i.supaimg.com/f85b39da-9929-4fdd-8220-e000d8e5fc91.jpg" alt="Luxury Perfume" class="hero-background">
     <div class="hero-content">
       <div class="hero-badge">✨ Artisan Crafted Since 2020</div>
       <h2 class="hero-title">Discover Your Signature Scent</h2>
@@ -518,17 +585,10 @@ footer p {
       <div class="products-grid">
         <div class="product-card">
           <div class="bestseller">Bestseller</div>
-          <img src="https://public.youware.com/users-website-assets/prod/a8e461ac-6f9d-43bb-9be1-2cac44df5698/2a8fc9ff3da245fab85262591208dc9d.jpg" alt="Rose Elegance Perfume" class="product-image">
+          <img src="https://i.supaimg.com/ae59299c-1b1e-4bbf-8a7e-6cd56423d529.jpg" alt="Rose Elegance Perfume" class="product-image">
           <div class="product-info">
-            <h3 class="product-title">Rose Elegance</h3>
-            <p class="product-subtitle">Eau de Parfum • 50ml</p>
-            
-            <div class="fragrance-notes">
-              <h4>Fragrance Notes</h4>
-              <p><strong>Top:</strong> Fresh Rose Petals, Pink Grapefruit<br>
-              <strong>Heart:</strong> Jasmine, Peony, White Tea<br>
-              <strong>Base:</strong> Sandalwood, Musk, Amber</p>
-            </div>
+            <h3 class="product-title">KHAIR</h3>
+            <p class="product-subtitle">F U S I O N</p>
             
             <div class="product-rating">
               <span class="stars">★★★★★</span>
@@ -550,29 +610,19 @@ footer p {
               </div>
             </div>
             
-            <p class="product-description">A sophisticated floral bouquet perfect for evening wear. Our signature blend captivates with fresh rose petals and settles into warm, sensual base notes.</p>
+            <p class="product-description">A sophisticated floral bouquet perfect for outing wear. Our signature blend captivates with fresh rose petals and settles into warm, sensual base notes.</p>
             
             <div class="product-pricing">
-              <div class="price">₦45,000</div>
-              <p class="price-note">Free shipping in Nigeria</p>
+              <div class="price">₦27,000</div>
             </div>
-            
-            <button class="btn btn-primary">Add to Cart</button>
           </div>
         </div>
         
         <div class="product-card">
-          <img src="https://public.youware.com/users-website-assets/prod/a8e461ac-6f9d-43bb-9be1-2cac44df5698/e5c3ec975c174bf0af2466ea00aa77d5.jpg" alt="Midnight Musk Perfume" class="product-image">
+          <img src="https://i.supaimg.com/5aa11de5-85fa-4a19-8d42-d45637782503.jpg" alt="Midnight Musk Perfume" class="product-image">
           <div class="product-info">
-            <h3 class="product-title">Midnight Musk</h3>
-            <p class="product-subtitle">Eau de Parfum • 50ml</p>
-            
-            <div class="fragrance-notes">
-              <h4>Fragrance Notes</h4>
-              <p><strong>Top:</strong> Black Pepper, Bergamot<br>
-              <strong>Heart:</strong> Oud, Cedar, Violet<br>
-              <strong>Base:</strong> White Musk, Patchouli, Vanilla</p>
-            </div>
+            <h3 class="product-title">PETRA</h3>
+            <p class="product-subtitle">Lattafa</p>
             
             <div class="product-rating">
               <span class="stars">★★★★★</span>
@@ -598,26 +648,17 @@ footer p {
             
             <div class="product-pricing">
               <div class="price">₦52,000</div>
-              <p class="price-note">Free shipping in Nigeria</p>
             </div>
             
-            <button class="btn btn-primary">Add to Cart</button>
           </div>
         </div>
         
         <div class="product-card">
           <div class="limited-edition">Limited Edition</div>
-          <img src="https://public.youware.com/users-website-assets/prod/a8e461ac-6f9d-43bb-9be1-2cac44df5698/26cbe9a54ad947169a312ca553176c09.jpg" alt="Vanilla Bliss Perfume" class="product-image">
+          <img src="https://i.supaimg.com/76e36991-04f7-4820-9451-8440d0cffa21.jpg" alt="Vanilla Bliss Perfume" class="product-image">
           <div class="product-info">
-            <h3 class="product-title">Vanilla Bliss</h3>
-            <p class="product-subtitle">Eau de Parfum • 50ml</p>
-            
-            <div class="fragrance-notes">
-              <h4>Fragrance Notes</h4>
-              <p><strong>Top:</strong> Sweet Orange, Pink Pepper<br>
-              <strong>Heart:</strong> Madagascar Vanilla, Tonka Bean<br>
-              <strong>Base:</strong> Amber, Caramel, White Musk</p>
-            </div>
+            <h3 class="product-title">KEYALI</h3>
+            <p class="product-subtitle">Extrait de Parfum</p>
             
             <div class="product-rating">
               <span class="stars">★★★★★</span>
@@ -631,7 +672,7 @@ footer p {
               </div>
               <div class="feature">
                 <span class="feature-icon">🍯</span>
-                <div>Sweet</div>
+                <div>Vanila Candy - ROCK SUGAR</div>
               </div>
               <div class="feature">
                 <span class="feature-icon">☀️</span>
@@ -643,10 +684,8 @@ footer p {
             
             <div class="product-pricing">
               <div class="price">₦48,000</div>
-              <p class="price-note">Only 50 bottles remaining</p>
             </div>
             
-            <button class="btn btn-primary">Add to Cart</button>
           </div>
         </div>
       </div>
@@ -659,21 +698,21 @@ footer p {
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="testimonial-rating">★★★★★</div>
-          <p class="testimonial-text">"Rose Elegance is absolutely divine! The scent lasts all day and I receive compliments everywhere I go. Worth every naira!"</p>
+          <p class="testimonial-text">"KHAIR is absolutely divine! The scent lasts all day and I receive compliments everywhere I go. Worth every naira!"</p>
           <div class="testimonial-author">Adunni O.</div>
           <div class="testimonial-location">Lagos, Nigeria</div>
         </div>
         
         <div class="testimonial-card">
           <div class="testimonial-rating">★★★★★</div>
-          <p class="testimonial-text">"Midnight Musk has become my signature scent. The quality is exceptional and the packaging is so elegant."</p>
+          <p class="testimonial-text">"PETRA has become my signature scent. The quality is exceptional and the packaging is so elegant."</p>
           <div class="testimonial-author">Kemi A.</div>
           <div class="testimonial-location">Abuja, Nigeria</div>
         </div>
         
         <div class="testimonial-card">
           <div class="testimonial-rating">★★★★★</div>
-          <p class="testimonial-text">"Vanilla Bliss is pure luxury in a bottle. The vanilla notes are so rich and sophisticated. Highly recommend!"</p>
+          <p class="testimonial-text">"KEYALI is pure luxury in a bottle. The vanilla notes are so rich and sophisticated. Highly recommend!"</p>
           <div class="testimonial-author">Funmi L.</div>
           <div class="testimonial-location">Port Harcourt, Nigeria</div>
         </div>
@@ -685,10 +724,15 @@ footer p {
     <div class="container">
       <h2 class="section-title">Contact Us</h2>
       <div class="contact-content">
+        <div class="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <a href="https://wa.me/2348104776392" class="btn btn-primary">Send via WhatsApp</a>
+        </div>
         <div class="contact-info">
-          <p>Email: <span class="social-info">scentbyseun@gmail.com</span></p>
-          <p>Phone: <span class="social-info">+234 812 345 6789</span></p>
-          <p>Follow us on Instagram: <span class="social-info">@scentbyseun</span></p>
+          <p>Phone: <span class="social-info">+234 810 477 6392</span></p>
+          <p>Address: <span class="social-info">Lagos, Nigeria</span></p>
         </div>
       </div>
     </div>
@@ -697,10 +741,11 @@ footer p {
   <footer>
     <p>&copy; 2025 Scent By Seun | All Rights Reserved</p>
     <div class="footer-links">
-      <a href="#" target="_blank">Created By Code_Cove</a>
+      <a href="https://codecove1.github.io/-d-_C-v-/" target="_blank">Created By Code_Cove</a>
     </div>
   </footer>
 
-  <script src="https://lib.youware.com/youware-lib-editor.1752562065.js" id="yourware-lib"></script><script src="js/script.js"></script>
+  <script src="https://lib.youware.com/youware-lib-editor.1752562065.js" id="yourware-lib"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
